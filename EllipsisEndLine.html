@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web подсказки</title>
+    <style>
+      .block {
+        max-width: 300px;
+      }
+
+      .one-line {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .many-line {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html">Назад</a>
+    <h1>Многоточие в конце первой строки</h1>
+    <div class="block">
+      <span class="one-line">
+        Екатерина Медичи в одиночестве сидела у стола, опершись локтем на
+        раскрытый Часослов и поддерживая голову рукой, все еще поразительно
+        красивой благодаря косметике флорентийца Рене, занимавшего при
+        королеве-матери две должности
+      </span>
+    </div>
+    <h1>Многоточие в конце первой строки</h1>
+    <div class="block">
+      <span class="many-line">
+        Екатерина Медичи в одиночестве сидела у стола, опершись локтем на
+        раскрытый Часослов и поддерживая голову рукой, все еще поразительно
+        красивой благодаря косметике флорентийца Рене, занимавшего при
+        королеве-матери две должности
+      </span>
+    </div>
+  </body>
+</html>
