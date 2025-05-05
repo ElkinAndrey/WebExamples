@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web подсказки</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <style>
+      .blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .block {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .input {
+        height: 400px;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html">Назад</a>
+    <h1>Переворачиватель строк</h1>
+    <div class="blocks">
+      <div class="block">
+        <h3>Исходный текст</h3>
+        <textarea id="input" class="input" oninput="onChange()"></textarea>
+      </div>
+      <div class="block">
+        <h3>Перевенутый текст текст</h3>
+        <textarea id="output" class="input" readonly></textarea>
+      </div>
+    </div>
+    <script>
+      function onChange() {
+        const array = document.getElementById("input").value.split("\n").reverse();
+        document.getElementById("output").value = array.join("\n");
+      }
+    </script>
+  </body>
+</html>
